@@ -1,0 +1,42 @@
+.nav {
+	padding-top: 12px;
+	padding-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--white);
+
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--mainBlack);
+	text-transform: uppercase;
+
+	&__articles {
+		display: flex;
+		align-items: center;
+		gap: 0 8px;
+
+		&_hot {
+			display: flex;
+			align-items: center;
+			gap: 0 8px;
+		}
+
+		&_links {
+			height: 21px;
+			display: flex;
+			align-items: end;
+			gap: 0 40px;
+
+			.active {
+				color: var(--accent);
+			}
+		}
+	}
+
+	&__live {
+		display: flex;
+		align-items: center;
+		gap: 0 12px;
+	}
+}

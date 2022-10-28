@@ -27,10 +27,13 @@ body {
 }
 
 a {
-	font-weight: 400;
-	color: var(--mainBlack);
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
 	text-decoration: inherit;
+	text-transform: inherit;
 }
+
 a:hover {
 	color: var(--accent);
 }
