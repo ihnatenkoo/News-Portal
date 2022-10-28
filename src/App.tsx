@@ -1,7 +1,12 @@
 import { FC } from 'react';
+import { Header } from './components/Header/Header';
 
 const App: FC = () => {
-	return <h1>Hello Vite</h1>;
+	return (
+		<main>
+			<Header />
+		</main>
+	);
 };
 
 export default App;

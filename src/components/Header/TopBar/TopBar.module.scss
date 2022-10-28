@@ -1,0 +1,110 @@
+.nav {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--white);
+
+	&__leftBar {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		gap: 0 40px;
+
+		.menu {
+			padding: 8px 12px;
+			border-radius: 4px;
+			color: var(--black);
+			background-color: var(--mainBg);
+
+			&__img {
+				margin-right: 16px;
+			}
+
+			&__title {
+				font-weight: 500;
+			}
+
+			&:hover .menu__title {
+				color: var(--accent);
+			}
+		}
+
+		.cities {
+			display: flex;
+			gap: 0 32px;
+
+			a {
+				color: var(--black);
+				font-size: 14px;
+				font-weight: 600;
+
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+
+	&__rightBar {
+		display: flex;
+		align-items: center;
+		gap: 0 38px;
+
+		.form {
+			position: relative;
+			input {
+				padding: 11px 16px 11px 46px;
+				background-color: var(--mainBg);
+				border-radius: 68px;
+				border: none;
+
+				&::placeholder {
+					color: #b0b0b0;
+				}
+
+				&:focus {
+					outline-color: var(--accent);
+				}
+			}
+
+			img {
+				position: absolute;
+				left: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		.social {
+			display: flex;
+			gap: 0 32px;
+			img {
+				cursor: pointer;
+			}
+		}
+
+		.divider {
+			width: 1px;
+			height: 16px;
+			background-color: #8a8a8a;
+		}
+
+		.languages {
+			display: flex;
+			gap: 0 16px;
+			font-weight: 500;
+			font-size: 14px;
+			color: #b0b0b0;
+
+			span {
+				cursor: pointer;
+			}
+
+			span.active {
+				color: var(--black);
+			}
+		}
+	}
+}
