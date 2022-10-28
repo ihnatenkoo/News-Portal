@@ -1,4 +1,4 @@
-@import url('/fonts/TTSevers/stylesheet.css');
+@import url('/fonts/TTSevers/stylesheet.scss');
 
 :root {
 	--accent: #ff7534;
@@ -21,6 +21,12 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	min-width: 320px;
@@ -33,6 +39,7 @@ a {
 	font-weight: inherit;
 	text-decoration: inherit;
 	text-transform: inherit;
+	transition: all 0.15s linear;
 }
 
 a:hover {
@@ -50,7 +57,11 @@ button {
 }
 
 menu,
-p {
+p,
+h1,
+h2,
+h3,
+h4 {
 	padding: 0;
 	margin: 0;
 }
