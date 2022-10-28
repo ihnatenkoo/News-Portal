@@ -1,0 +1,44 @@
+@import url('/fonts/TTSevers/stylesheet.css');
+
+:root {
+	font-family: TTSevers, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--accent: #ff7534;
+	--white: #ffffff;
+	--mainBlack: #182840;
+	--mainBg: #f6f6f6;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background-color: var(--mainBg);
+}
+
+a {
+	font-weight: 400;
+	color: var(--mainBlack);
+	text-decoration: inherit;
+}
+a:hover {
+	color: var(--accent);
+}
+
+button {
+	padding: 0;
+	border: none;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
