@@ -1,0 +1,11 @@
+.date {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 140%;
+	color: var(--gray);
+	text-transform: uppercase;
+
+	&.only_time {
+		font-size: 14px;
+	}
+}
