@@ -2,6 +2,7 @@
 	padding: 16px 16px 24px;
 	width: 304px;
 	min-width: 304px;
+	height: fit-content;
 	background-color: var(--white);
 	border-radius: 12px;
 
@@ -47,6 +48,8 @@
 	}
 
 	&__content {
+		margin-bottom: 32px;
+
 		.article {
 			padding: 24px 0;
 			border-bottom: 1px solid var(--gray-light);
