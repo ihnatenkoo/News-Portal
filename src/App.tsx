@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import CategoriesBlock from './components/CategoriesBlock/CategoriesBlock';
 import { Header } from './components/Header/Header';
 import IntroBlock from './components/IntroBlock/IntroBlock';
 import MainBlock from './components/MainBlock/MainBlock';
@@ -13,6 +14,7 @@ const App: FC = () => {
 			<IntroBlock />
 			<MainBlock />
 			<VideoBlock />
+			<CategoriesBlock />
 		</main>
 	);
 };

@@ -1,0 +1,10 @@
+.section {
+	padding-top: 32px;
+	padding-bottom: 64px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 24px 0;
+}

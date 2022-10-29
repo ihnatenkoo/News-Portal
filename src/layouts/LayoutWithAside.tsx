@@ -7,6 +7,10 @@ interface ILayoutWithAside extends PropsWithChildren {
 }
 
 const LayoutWithAside: FC<ILayoutWithAside> = ({ children, className }) => {
-	return <div className={cn(s.layout, className, 'container')}>{children}</div>;
+	return (
+		<section className={cn(s.layout, className, 'container')}>
+			{children}
+		</section>
+	);
 };
 export default LayoutWithAside;
