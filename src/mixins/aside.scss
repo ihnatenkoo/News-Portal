@@ -1,0 +1,8 @@
+@mixin aside {
+	padding: 16px 16px 24px;
+	width: 304px;
+	min-width: 304px;
+	height: fit-content;
+	background-color: var(--white);
+	border-radius: 12px;
+}

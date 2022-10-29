@@ -1,0 +1,47 @@
+@import '../../../mixins/aside.scss';
+
+.aside {
+	@include aside;
+
+	&__header {
+		margin-bottom: 8px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		margin-bottom: 32px;
+	}
+}
+
+.article {
+	padding: 24px 0;
+	border-bottom: 1px solid var(--gray-light);
+
+	&__author {
+		display: flex;
+		align-items: center;
+		gap: 0 16px;
+
+		&_info {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				margin-top: 5px;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 140%;
+				text-transform: uppercase;
+				color: var(--gray);
+			}
+		}
+	}
+
+	&__title {
+		margin: 16px 0 12px;
+		max-height: 42px;
+		overflow: hidden;
+	}
+}

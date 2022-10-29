@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import LayoutWithAside from '../../layouts/LayoutWithAside';
+import Columns from '../asides/Columns/Columns';
 import s from './CategoriesBlock.module.scss';
 
 const CategoriesBlock: FC = () => {
 	return (
 		<LayoutWithAside className={s.section}>
-			aside
+			<Columns />
 			<div className={s.content}>
 				<span>content</span>
 				<span>content</span>
@@ -14,4 +15,5 @@ const CategoriesBlock: FC = () => {
 		</LayoutWithAside>
 	);
 };
+
 export default CategoriesBlock;
