@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import s from './WithPhoto.module.scss';
 
-const WithPhoto: FC = () => {
+export const WithPhoto: FC = () => {
 	return (
 		<div className={s.label}>
 			<img src="/icons/labels/with-photo.svg" alt="news with photo" />
@@ -9,4 +9,3 @@ const WithPhoto: FC = () => {
 		</div>
 	);
 };
-export default WithPhoto;

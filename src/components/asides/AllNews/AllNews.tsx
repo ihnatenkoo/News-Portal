@@ -2,7 +2,8 @@ import { FC, useState } from 'react';
 import { HTag, Date } from '../../ui';
 import s from './AllNews.module.scss';
 import cn from 'classnames';
-import WithPhoto from '../../ui/labels/WithPhoto/WithPhoto';
+import { WithPhoto } from '../../ui/labels/WithPhoto/WithPhoto';
+import { HotNews } from '../../ui/labels/HotNews/HotNews';
 
 const tabs = [
 	{ id: 1, name: 'Всi' },
@@ -113,6 +114,7 @@ const AllNews: FC = () => {
 					<article className={s.article} key={a.id}>
 						<HTag tag="h5" className={s.article__title}>
 							{a.isWithPhoto && <WithPhoto />}
+							{a.isHot && <HotNews />}
 							<Date type="time">14:59</Date>
 							{a.title}
 						</HTag>
