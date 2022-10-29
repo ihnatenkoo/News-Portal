@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import s from './HTag.module.scss';
+import s from './htag.module.scss';
 import cn from 'classnames';
 
 interface HTagProps extends PropsWithChildren {

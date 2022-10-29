@@ -1,5 +1,14 @@
-.head {
-	margin-bottom: 32px;
-	display: flex;
-	justify-content: space-between;
+.regions {
+	width: fit-content;
+
+	&__head {
+		margin-bottom: 32px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__cards {
+		display: flex;
+		gap: 0 16px;
+	}
 }

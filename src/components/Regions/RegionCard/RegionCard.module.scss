@@ -9,7 +9,13 @@
 	}
 
 	&__inner {
+		height: 547px;
+		overflow: hidden;
 		margin-bottom: 67px;
+
+		&_day {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__footer {
@@ -32,8 +38,11 @@
 
 	.article {
 		&__title {
+			max-height: 110px;
+			overflow: hidden;
 			padding: 16px 0;
 			border-bottom: 1px solid var(--gray-light);
+			cursor: pointer;
 
 			span {
 				margin-right: 10px;
