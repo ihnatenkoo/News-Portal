@@ -1,0 +1,43 @@
+.card {
+	padding: 16px 16px 32px;
+	width: 315px;
+	background-color: var(--white);
+	border-radius: 12px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__inner {
+		margin-bottom: 67px;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+
+		&_img {
+			margin-left: 16px;
+			transition: all 0.2s ease-in;
+		}
+
+		&:hover .card__footer_title {
+			color: var(--accent);
+			text-decoration: underline;
+		}
+		&:hover .card__footer_img {
+			transform: translateX(10px);
+		}
+	}
+
+	.article {
+		&__title {
+			padding: 16px 0;
+			border-bottom: 1px solid var(--gray-light);
+
+			span {
+				margin-right: 10px;
+			}
+		}
+	}
+}

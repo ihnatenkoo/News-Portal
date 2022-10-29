@@ -8,4 +8,8 @@
 	&.only_time {
 		font-size: 14px;
 	}
+
+	&.accent {
+		color: var(--accent);
+	}
 }
