@@ -1,0 +1,24 @@
+.section_title {
+	margin-bottom: 32px;
+}
+
+.news {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px 32px;
+
+	&__item {
+		width: 31%;
+		min-width: 304px;
+		display: flex;
+		flex-direction: column;
+
+		&_img {
+			margin-bottom: 16px;
+		}
+
+		&_title {
+			margin-top: 10px;
+		}
+	}
+}

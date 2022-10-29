@@ -7,7 +7,7 @@ import s from './MainBlock.module.scss';
 
 const MainBlock: FC = () => {
 	return (
-		<LayoutWithAside>
+		<LayoutWithAside className={s.section}>
 			<AllNews />
 			<div className={s.content}>
 				<RedactionChoice />

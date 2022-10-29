@@ -6,12 +6,10 @@ interface IDate extends PropsWithChildren {
 	type?: 'full-date' | 'time';
 }
 
-const Date: FC<IDate> = ({ children, type = 'full-date' }) => {
+export const Date: FC<IDate> = ({ children, type = 'full-date' }) => {
 	return (
 		<span className={cn(s.date, { [s.only_time]: type === 'time' })}>
 			{children}
 		</span>
 	);
 };
-
-export default Date;
