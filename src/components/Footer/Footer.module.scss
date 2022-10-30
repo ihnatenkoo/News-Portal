@@ -16,7 +16,6 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 8px 0;
 
 		li {
 			font-weight: 400;
@@ -48,12 +47,73 @@
 	&__inner {
 		margin-top: 32px;
 		display: flex;
-		gap: 0 32px;
+		flex-wrap: wrap;
+		gap: 12px 32px;
 	}
 
 	&__item {
 		display: flex;
 		align-items: flex-end;
 		gap: 0 12px;
+	}
+}
+
+@media screen and (max-width: 1270px) {
+	.cols__inner {
+		gap: 60px 24px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.cols__inner {
+		justify-content: space-around;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.footer {
+		&__inner {
+			gap: 0;
+		}
+
+		.title {
+			padding: 16px;
+			border-bottom: 1px solid #dedfe0;
+		}
+	}
+
+	.cols__inner {
+		gap: 0;
+
+		.col {
+			width: 100%;
+			gap: 0;
+
+			&.links {
+				margin: 40px 0;
+				text-align: center;
+				gap: 24px;
+			}
+		}
+	}
+
+	ul {
+		max-height: 51px;
+		overflow: hidden;
+
+		li {
+			&:first-child {
+				padding-top: 10px;
+			}
+		}
+	}
+
+	.social {
+		&__inner {
+			gap: 24px 32px;
+		}
+		&__item {
+			width: 40%;
+		}
 	}
 }

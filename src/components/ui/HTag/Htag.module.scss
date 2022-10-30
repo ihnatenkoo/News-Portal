@@ -25,3 +25,9 @@
 	line-height: 140%;
 	color: var(--mainBlack);
 }
+
+@media screen and (max-width: 575px) {
+	.h3 {
+		font-size: 22px;
+	}
+}

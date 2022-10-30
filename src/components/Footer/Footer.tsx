@@ -27,11 +27,21 @@ const Footer: FC = () => {
 						<div className={s.col}>
 							<ul className={s.title}>
 								Здоров’я
-								<li>Дієти</li>
-								<li>Краса</li>
-								<li>Секс</li>
-								<li>Психологія</li>
-								<li>Медицина</li>
+								<li>
+									<a href="#">Дієти</a>
+								</li>
+								<li>
+									<a href="#">Краса</a>
+								</li>
+								<li>
+									<a href="#">Секс</a>
+								</li>
+								<li>
+									<a href="#">Психологія</a>
+								</li>
+								<li>
+									<a href="#">Медицина</a>
+								</li>
 							</ul>
 							<ul className={s.title}>
 								Події
@@ -43,43 +53,85 @@ const Footer: FC = () => {
 						<div className={s.col}>
 							<ul className={s.title}>
 								Лайфстайл
-								<li>Історії з життя</li>
-								<li>Подорожі</li>
-								<li>Кухня</li>
-								<li>Мода та стиль</li>
-								<li>Зірковий гороскоп</li>
+								<li>
+									<a href="#">Історії з життя</a>
+								</li>
+								<li>
+									<a href="#">Подорожі</a>
+								</li>
+								<li>
+									<a href="#">Кухня</a>
+								</li>
+								<li>
+									<a href="#">Мода та стиль</a>
+								</li>
+								<li>
+									<a href="#">Зірковий гороскоп</a>
+								</li>
 							</ul>
 							<ul className={s.title}>
 								Суспільство
-								<li>Охорона здоров’я</li>
-								<li>Безпека</li>
-								<li>Екологія</li>
-								<li>Релігія</li>
+								<li>
+									<a href="#">Охорона здоров’я</a>
+								</li>
+								<li>
+									<a href="#">Безпека</a>
+								</li>
+								<li>
+									<a href="#">Екологія</a>
+								</li>
+								<li>
+									<a href="#">Релігія</a>
+								</li>
 							</ul>
 						</div>
 						<div className={s.col}>
 							<ul className={s.title}>
 								Регіони
-								<li>Київ</li>
-								<li>Одеса</li>
-								<li>Харків</li>
-								<li>Львів</li>
+								<li>
+									<a href="#">Київ</a>
+								</li>
+								<li>
+									<a href="#">Одеса</a>
+								</li>
+								<li>
+									<a href="#">Харків</a>
+								</li>
+								<li>
+									<a href="#">Львів</a>
+								</li>
 							</ul>
 							<ul className={s.title}>
 								Техно
-								<li>Наука</li>
-								<li>Гаджети</li>
-								<li>ІТ</li>
-								<li>Космос</li>
+								<li>
+									<a href="#">Наука</a>
+								</li>
+								<li>
+									<a href="#">Гаджети</a>
+								</li>
+								<li>
+									<a href="#">ІТ</a>
+								</li>
+								<li>
+									<a href="#">Космос</a>
+								</li>
 							</ul>
 						</div>
 						<div className={s.col}>
 							<ul className={s.title}>
 								Економіка
-								<li>Фінанси</li>
-								<li>Комунальні послуги</li>
-								<li>Бізнес</li>
-								<li>Львів</li>
+								<li>
+									<a href="#">Фінанси</a>
+								</li>
+								<li>
+									<a href="#">Комунальні послуги</a>
+								</li>
+								<li>
+									<a href="#">Бізнес</a>
+								</li>
+								<li>
+									<a href="#">Львів</a>
+								</li>
 							</ul>
 							<ul className={s.title}>Спорт</ul>
 						</div>
