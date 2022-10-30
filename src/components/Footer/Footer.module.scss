@@ -97,17 +97,6 @@
 		}
 	}
 
-	ul {
-		max-height: 51px;
-		overflow: hidden;
-
-		li {
-			&:first-child {
-				padding-top: 10px;
-			}
-		}
-	}
-
 	.social {
 		&__inner {
 			gap: 24px 32px;
