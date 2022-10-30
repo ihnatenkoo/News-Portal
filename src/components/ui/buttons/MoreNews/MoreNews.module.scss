@@ -1,0 +1,17 @@
+.link {
+	display: flex;
+	align-items: center;
+
+	&__img {
+		margin-left: 16px;
+		transition: all 0.2s ease-in;
+	}
+
+	&:hover .link__title {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	&:hover .link__img {
+		transform: translateX(10px);
+	}
+}

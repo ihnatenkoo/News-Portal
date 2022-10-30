@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Date, HTag } from '../../ui';
+import { Date, HTag, MoreNews } from '../../ui';
 import { IAllNews } from '../types';
 import s from './RegionCard.module.scss';
 interface IRegionCard {
@@ -28,16 +28,7 @@ const RegionCard: FC<IRegionCard> = ({ newsData }) => {
 				))}
 			</div>
 
-			<a href="#" className={s.card__footer}>
-				<HTag tag="h5" className={s.card__footer_title}>
-					Більше новин
-				</HTag>
-				<img
-					src="/icons/arrow-right.svg"
-					alt="more news"
-					className={s.card__footer_img}
-				/>
-			</a>
+			<MoreNews>Більше новин</MoreNews>
 		</div>
 	);
 };
