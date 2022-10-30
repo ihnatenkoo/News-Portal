@@ -1,3 +1,5 @@
+@import '../../mixins/button.scss';
+
 .section {
 	padding: 56px 0 112px;
 	background: linear-gradient(
@@ -14,6 +16,9 @@
 
 	&__head {
 		margin-bottom: 25px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
 		&_title {
 			color: var(--white);
@@ -45,7 +50,7 @@
 	gap: 32px;
 
 	&__item {
-		width: 304px;
+		width: 47%;
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
@@ -58,5 +63,86 @@
 		&_title {
 			color: var(--white) !important;
 		}
+	}
+}
+
+.link {
+	display: flex;
+	align-items: center;
+
+	&__title {
+		color: var(--white);
+	}
+
+	&__img {
+		margin-left: 16px;
+		transition: all 0.2s ease-in;
+	}
+
+	&:hover .link__title {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	&:hover .link__img {
+		transform: translateX(10px);
+	}
+}
+
+.button {
+	@include button;
+	display: none;
+	width: 100%;
+	color: var(--white);
+	border-color: var(--white);
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&__inner {
+			flex-wrap: wrap;
+			gap: 32px 12px;
+		}
+	}
+
+	.cards {
+		&__item {
+			width: 304px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.section {
+		&__inner {
+			justify-content: center;
+		}
+	}
+
+	.cards {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.main_card {
+		&_date {
+			margin: 16px 0 8px;
+		}
+		&_title {
+			font-size: 22px;
+		}
+	}
+
+	.cards {
+		&__item {
+			width: 100%;
+			&_title {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.button {
+		display: block;
 	}
 }

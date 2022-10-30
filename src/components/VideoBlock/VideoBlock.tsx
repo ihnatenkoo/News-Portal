@@ -34,6 +34,18 @@ const VideoBlock: FC = () => {
 				<HTag tag="h2" className={s.section__head_title}>
 					Вiдео
 				</HTag>
+				<button>
+					<a href="#" className={s.link}>
+						<HTag tag="h5" className={s.link__title}>
+							Більше новин
+						</HTag>
+						<img
+							src="/icons/arrow-right-white.svg"
+							alt="more news"
+							className={s.link__img}
+						/>
+					</a>
+				</button>
 			</div>
 
 			<div className={s.section__inner}>
@@ -56,6 +68,8 @@ const VideoBlock: FC = () => {
 						</div>
 					))}
 				</div>
+
+				<button className={s.button}>Більше</button>
 			</div>
 		</section>
 	);
