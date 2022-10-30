@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import LayoutWithAside from '../../layouts/LayoutWithAside';
 import Columns from '../asides/Columns/Columns';
+import Promo from '../Promo/Promo';
 import s from './CategoriesBlock.module.scss';
 
 const CategoriesBlock: FC = () => {
@@ -8,7 +9,7 @@ const CategoriesBlock: FC = () => {
 		<LayoutWithAside className={s.section}>
 			<Columns />
 			<div className={s.content}>
-				<span>content</span>
+				<Promo />
 				<span>content</span>
 				<span>content</span>
 			</div>
