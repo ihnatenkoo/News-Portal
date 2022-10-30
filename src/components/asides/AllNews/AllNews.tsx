@@ -112,7 +112,12 @@ const AllNews: FC = () => {
 			<div className={s.aside__content}>
 				{articles.map((news) => (
 					<article className={s.article} key={news.id}>
-						<HTag tag="h5" className={s.article__title}>
+						<HTag
+							tag="h5"
+							className={cn(s.article__title, {
+								[s.bold]: news.isHot,
+							})}
+						>
 							{news.isWithPhoto && <WithPhoto />}
 							{news.isHot && <HotNews />}
 							<Date type="time">14:59</Date>
