@@ -96,45 +96,27 @@ const Footer: FC = () => {
 						<HTag tag="h3">Новини у зручному форматі</HTag>
 						<div className={s.social__inner}>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/youtube.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/youtube.png" alt="socials" />
 								<span>YouTube</span>
 							</a>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/telegram.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/telegram.png" alt="socials" />
 								<span>Telegram</span>
 							</a>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/instagram.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/instagram.png" alt="socials" />
 								<span>Instagram</span>
 							</a>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/facebook.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/facebook.png" alt="socials" />
 								<span>Facebook</span>
 							</a>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/tiktok.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/tiktok.png" alt="socials" />
 								<span>TikTok</span>
 							</a>
 							<a href="#" className={s.social__item}>
-								<img
-									src="/public/icons/social/footer/google.png"
-									alt="socials"
-								/>
+								<img src="/icons/social/footer/google.png" alt="socials" />
 								<span>Google news</span>
 							</a>
 						</div>
