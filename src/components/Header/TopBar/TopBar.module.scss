@@ -110,3 +110,100 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.nav {
+		&__rightBar {
+			.social {
+				gap: 0 12px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.nav {
+		&__leftBar {
+			.cities {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		&__rightBar {
+			.social,
+			.divider {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.nav {
+		min-height: 65px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+
+		&__rightBar {
+			min-height: 33px;
+
+			.form {
+				input {
+					padding: 0 0 0 0;
+					width: 0;
+					background-color: transparent;
+					transition: all 0.25s ease-out;
+				}
+
+				img {
+					left: 8px;
+				}
+
+				&.visible {
+					input {
+						padding: 8px 16px 8px 46px;
+						width: 200px;
+						background-color: var(--mainBg);
+					}
+
+					img {
+						left: 16px;
+					}
+				}
+			}
+
+			.languages {
+				flex-direction: column;
+				max-height: 14px;
+				overflow: hidden;
+			}
+		}
+
+		&__leftBar {
+			.menu {
+				padding: 5px 8px;
+				&__title {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 401px) {
+	.nav {
+		&__rightBar {
+			.form {
+				&.visible {
+					input {
+						width: 115px;
+					}
+				}
+			}
+		}
+	}
+}

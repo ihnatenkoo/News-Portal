@@ -3,15 +3,20 @@ import s from './TopBar.module.scss';
 import cn from 'classnames';
 
 const languages = [
-	{ id: 1, name: 'RU' },
-	{ id: 2, name: 'UA' },
+	{ id: 1, name: 'UA' },
+	{ id: 2, name: 'RU' },
 ];
 
 const TopBar: FC = () => {
 	const [activeLanguage, setActiveLanguage] = useState('UA');
+	const [isInputVisible, setIsInputVisible] = useState(false);
 
-	const changeLanguage = (value: string): void => {
+	const onChangeLanguage = (value: string): void => {
 		setActiveLanguage(value);
+	};
+
+	const onToggleInputVisible = (): void => {
+		setIsInputVisible((prev) => !prev);
 	};
 
 	return (
@@ -30,9 +35,13 @@ const TopBar: FC = () => {
 			</div>
 
 			<div className={s.nav__rightBar}>
-				<form className={s.form}>
+				<form className={cn(s.form, { [s.visible]: isInputVisible })}>
 					<input type="text" name="search" placeholder="пошук новин" />
-					<img src="/icons/search.svg" alt="search" />
+					<img
+						src="/icons/search.svg"
+						alt="search"
+						onClick={onToggleInputVisible}
+					/>
 				</form>
 
 				<div className={s.social}>
@@ -49,7 +58,7 @@ const TopBar: FC = () => {
 						<span
 							key={l.id}
 							className={cn({ [s.active]: activeLanguage === l.name })}
-							onClick={() => changeLanguage(l.name)}
+							onClick={() => onChangeLanguage(l.name)}
 						>
 							{l.name}
 						</span>
