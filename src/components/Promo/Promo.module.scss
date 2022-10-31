@@ -12,6 +12,7 @@
 	&__inner {
 		margin-bottom: 24px;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 16px 32px;
 
 		h2 {
@@ -19,9 +20,6 @@
 		}
 
 		&_info {
-			width: 530px;
-			max-width: 100%;
-
 			p {
 				margin-bottom: 10px;
 				display: flex;
@@ -38,6 +36,7 @@
 		&_item {
 			padding: 16px;
 			width: 304px;
+			min-width: 304px;
 			background: #f7f7f7;
 			border-radius: 8px;
 			display: flex;
@@ -47,6 +46,36 @@
 
 			&:hover {
 				box-shadow: 1px 1px 2px var(--accent);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.promo {
+		&__cards {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.promo {
+		&__inner {
+			&_img {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.promo {
+		padding: 24px 16px 32px;
+		&__inner {
+			&_title {
+				font-size: 22px;
 			}
 		}
 	}

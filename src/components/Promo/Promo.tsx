@@ -13,14 +13,18 @@ const Promo: FC = () => {
 			</div>
 
 			<div className={s.promo__inner}>
-				<img src="/images/promo/promo.jpg" alt="promo" />
+				<img
+					src="/images/promo/promo.jpg"
+					alt="promo"
+					className={s.promo__inner_img}
+				/>
 				<div className={s.promo__inner_info}>
 					<p>
 						<Date>05 серпня 11:00</Date>
 						<PromoLabel />
 					</p>
 
-					<HTag tag="h2">
+					<HTag tag="h2" className={s.promo__inner_title}>
 						Акція! Телевізори Samsung з вигодою та в оплату частинами до 12
 						платежів
 					</HTag>
