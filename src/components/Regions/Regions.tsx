@@ -1,8 +1,14 @@
 import { FC } from 'react';
-import { AllCategoriesTag, HTag } from '../ui/';
+import { AllCategoriesTag, HTag, Tabs } from '../ui/';
 import RegionCard from './RegionCard/RegionCard';
 import { IAllNews } from './types';
 import s from './Regions.module.scss';
+
+const tabsData = [
+	{ id: 1, name: 'Київ' },
+	{ id: 2, name: 'Харків' },
+	{ id: 3, name: 'Одеса' },
+];
 
 const regionsNewsData: Array<IAllNews> = [
 	{
@@ -140,6 +146,9 @@ const Regions: FC = () => {
 				<HTag tag="h2">Регіони</HTag>
 				<AllCategoriesTag>Всі новини розділу</AllCategoriesTag>
 			</div>
+
+			<Tabs tabsData={tabsData} className={s.regions__tabs} />
+
 			<div className={s.regions__cards}>
 				{regionsNewsData.map((region) => (
 					<RegionCard newsData={region} key={region.city} />

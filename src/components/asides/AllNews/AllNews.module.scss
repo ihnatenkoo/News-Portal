@@ -46,10 +46,18 @@
 
 @media screen and (max-width: 425px) {
 	.aside {
+		padding: 40px 16px 24px;
 		max-width: 1400px;
 		position: absolute;
 		width: 100%;
 		top: 0;
 		left: 0;
+
+		&__content {
+			.article:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+		}
 	}
 }

@@ -13,12 +13,21 @@
 		display: flex;
 		gap: 0 16px;
 	}
+
+	&__tabs {
+		display: none;
+		margin-bottom: 24px;
+	}
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
 	.regions {
 		&__head {
 			margin-bottom: 24px;
+		}
+
+		&__tabs {
+			display: flex;
 		}
 	}
 }

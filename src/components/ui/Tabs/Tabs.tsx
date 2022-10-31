@@ -7,9 +7,10 @@ interface ITabs {
 		id: number;
 		name: string;
 	}>;
+	className?: string;
 }
 
-export const Tabs: FC<ITabs> = ({ tabsData }) => {
+export const Tabs: FC<ITabs> = ({ tabsData, className }) => {
 	const [activeTab, setActiveTab] = useState<number>(1);
 
 	const onTabChange = (index: number): void => {
@@ -17,7 +18,7 @@ export const Tabs: FC<ITabs> = ({ tabsData }) => {
 	};
 
 	return (
-		<ul className={s.tabs}>
+		<ul className={cn(s.tabs, className)}>
 			{tabsData.map((tab) => (
 				<li
 					className={cn({ [s.active]: activeTab === tab.id })}

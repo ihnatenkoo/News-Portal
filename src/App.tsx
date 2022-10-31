@@ -10,13 +10,13 @@ import WarStatistic from './components/WarStatistic/WarStatistic';
 const App: FC = () => {
 	return (
 		<main>
-			{/* <Header />
+			<Header />
 			<WarStatistic />
-			<IntroBlock /> */}
+			<IntroBlock />
 			<MainBlock />
-			{/* <VideoBlock />
+			<VideoBlock />
 			<CategoriesBlock />
-			<Footer /> */}
+			<Footer />
 		</main>
 	);
 };
