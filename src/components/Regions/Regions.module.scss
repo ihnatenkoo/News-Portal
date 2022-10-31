@@ -2,13 +2,23 @@
 	width: fit-content;
 
 	&__head {
+		max-width: 100%;
 		margin-bottom: 32px;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__cards {
 		display: flex;
 		gap: 0 16px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.regions {
+		&__head {
+			margin-bottom: 24px;
+		}
 	}
 }

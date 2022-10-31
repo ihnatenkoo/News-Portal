@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { HTag, Date } from '../ui';
+import { HTag, Date, LoadMoreBtn } from '../ui';
 import s from './RedactionChoice.module.scss';
 
 const newsData = [
@@ -68,6 +68,8 @@ const RedactionChoice: FC = () => {
 					</div>
 				))}
 			</div>
+
+			<LoadMoreBtn className={s.button} />
 		</section>
 	);
 };

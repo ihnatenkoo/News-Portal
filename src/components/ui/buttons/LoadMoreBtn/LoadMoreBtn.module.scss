@@ -2,6 +2,7 @@
 
 .btn {
 	@include button;
+	width: 100%;
 
 	img {
 		margin-right: 8px;

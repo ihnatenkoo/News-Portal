@@ -4,7 +4,14 @@
 }
 
 .content {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	gap: 56px 0;
+}
+
+@media screen and (max-width: 425px) {
+	.content {
+		margin-top: 1345px;
+	}
 }

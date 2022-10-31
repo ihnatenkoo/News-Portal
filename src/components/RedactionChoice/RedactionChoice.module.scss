@@ -23,3 +23,27 @@
 		}
 	}
 }
+
+.button {
+	display: none;
+}
+
+@media screen and (max-width: 425px) {
+	.news {
+		overflow: hidden;
+		max-height: 1070px;
+		margin-bottom: 32px;
+
+		&__item {
+			width: 100%;
+
+			&_title {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.button {
+		display: block;
+	}
+}
