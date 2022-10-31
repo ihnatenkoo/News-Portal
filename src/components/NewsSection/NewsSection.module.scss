@@ -30,6 +30,10 @@
 			color: #515151;
 			text-transform: uppercase;
 		}
+
+		&__tabs {
+			display: none;
+		}
 	}
 }
 
@@ -40,7 +44,6 @@
 
 	&__bottom {
 		display: flex;
-		align-items: center;
 		gap: 16px 32px;
 	}
 
@@ -75,6 +78,40 @@
 
 		&.bold {
 			font-weight: 600;
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) {
+	.cards {
+		&__bottom {
+			flex-wrap: wrap;
+		}
+	}
+
+	.card {
+		&_title {
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.cards {
+		display: none;
+	}
+
+	.news {
+		.aside {
+			width: 100%;
+
+			&__title {
+				display: none;
+			}
+
+			&__tabs {
+				display: flex;
+			}
 		}
 	}
 }

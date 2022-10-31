@@ -46,3 +46,34 @@
 		overflow: hidden;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.aside {
+		padding: 0;
+		width: 100%;
+		background-color: transparent;
+
+		&__header {
+			margin-bottom: 24px;
+		}
+
+		&__content {
+			overflow: hidden;
+			margin-bottom: 0;
+			display: flex;
+			gap: 0 24px;
+		}
+
+		.article {
+			padding: 16px;
+			min-width: 304px;
+			border-bottom: none;
+			background-color: var(--white);
+			border-radius: 8px;
+		}
+
+		button {
+			display: none;
+		}
+	}
+}

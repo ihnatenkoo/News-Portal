@@ -8,10 +8,16 @@ import {
 	HotNews,
 	OnlineLabel,
 	Exclusive,
+	Tabs,
 } from '../ui';
 import { ICategoryNewsData } from '../CategoriesBlock/categoriesNewsData';
 import s from './NewsSection.module.scss';
 import cn from 'classnames';
+
+const tabsData = [
+	{ id: 1, name: 'Новини' },
+	{ id: 2, name: 'Статті' },
+];
 
 interface INewsSection {
 	newsData: ICategoryNewsData;
@@ -31,7 +37,9 @@ const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
 					<div className={cn(s.card, s.main)}>
 						<img src={newsData.mainCard.img} alt="news" />
 						<Date className={s.card_date}>05 серпня 11:00</Date>
-						<HTag tag="h3">{newsData.mainCard.title}</HTag>
+						<HTag tag="h3" className={s.card_title}>
+							{newsData.mainCard.title}
+						</HTag>
 					</div>
 
 					<div className={s.cards__bottom}>
@@ -49,6 +57,9 @@ const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
 					<HTag tag="h5" className={s.aside__title}>
 						Новини розділу
 					</HTag>
+
+					<Tabs tabsData={tabsData} className={s.aside__tabs} />
+
 					<div className={s.aside__inner}>
 						{newsData.news.map((news) => (
 							<article className={s.article} key={news.id}>
