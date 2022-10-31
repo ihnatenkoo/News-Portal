@@ -1,5 +1,6 @@
 .intro {
 	position: relative;
+	padding-left: 64px;
 	padding-top: 238px;
 	padding-bottom: 56px;
 	height: 655px;
@@ -104,6 +105,7 @@
 	}
 
 	&__pubs {
+		overflow: hidden;
 		display: flex;
 		gap: 0 32px;
 
@@ -113,6 +115,7 @@
 			align-items: center;
 			gap: 0 16px;
 			width: 304px;
+			min-width: 304px;
 			height: 80px;
 			background: rgba(255, 255, 255, 0.32);
 			box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
@@ -135,6 +138,54 @@
 				line-height: 140%;
 				color: var(--white);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.slider {
+		&__title {
+			font-size: 35px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.intro {
+		padding-left: 24px;
+	}
+
+	.slider {
+		&__title {
+			font-size: 32px;
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.intro {
+		height: 490px;
+		padding-bottom: 25px;
+
+		&__bg {
+			width: 156%;
+			left: -56%;
+		}
+	}
+	.slider {
+		&__nav {
+			display: none;
+		}
+
+		&__title {
+			font-size: 24px;
+			max-height: 115px;
+			min-height: 115px;
+			overflow: hidden;
+		}
+
+		&__pubs {
+			gap: 0 16px;
 		}
 	}
 }

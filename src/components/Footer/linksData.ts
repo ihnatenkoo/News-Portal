@@ -7,7 +7,6 @@ export const healthLinks = [
 	{ id: 2, link: 'Краса' },
 	{ id: 3, link: 'Секс' },
 	{ id: 4, link: 'Психологія' },
-	{ id: 5, link: 'Медицина' },
 ];
 export const actionsLinks = [
 	{ id: 1, link: 'ДТП' },

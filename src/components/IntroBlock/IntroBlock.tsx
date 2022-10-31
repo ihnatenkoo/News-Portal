@@ -55,7 +55,7 @@ const IntroBlock: FC = () => {
 	};
 
 	return (
-		<section className={cn(s.intro, 'container')}>
+		<section className={cn(s.intro)}>
 			<img
 				className={s.intro__bg}
 				src={sliderPubsData[activePub - 1].img}
