@@ -1,0 +1,26 @@
+.tabs {
+	margin-bottom: 8px;
+	list-style: none;
+	display: flex;
+	gap: 0 16px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #919191;
+
+	li {
+		padding: 4px 8px;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.15s linear;
+
+		&.active {
+			background: var(--accent-light);
+			color: var(--accent);
+		}
+
+		&:hover {
+			color: var(--accent);
+		}
+	}
+}

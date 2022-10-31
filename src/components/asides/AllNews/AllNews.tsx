@@ -1,11 +1,11 @@
-import { FC, useState } from 'react';
-import { HTag, Date } from '../../ui';
+import { FC } from 'react';
+import { HTag, Date, Tabs } from '../../ui';
 import { WithPhoto, HotNews } from '../../ui/labels/';
 import { LoadMoreBtn } from '../../ui/buttons/';
 import s from './AllNews.module.scss';
 import cn from 'classnames';
 
-const tabs = [
+const tabsData = [
 	{ id: 1, name: 'Всi' },
 	{ id: 2, name: 'Новини' },
 	{ id: 3, name: 'Статi' },
@@ -82,12 +82,6 @@ const articles = [
 ];
 
 const AllNews: FC = () => {
-	const [activeTab, setActiveTab] = useState<number>(1);
-
-	const onTabChange = (index: number): void => {
-		setActiveTab(index);
-	};
-
 	return (
 		<aside className={s.aside}>
 			<header className={s.aside__header}>
@@ -97,17 +91,7 @@ const AllNews: FC = () => {
 				</a>
 			</header>
 
-			<ul className={s.aside__tabs}>
-				{tabs.map((tab) => (
-					<li
-						className={cn({ [s.active]: activeTab === tab.id })}
-						key={tab.id}
-						onClick={() => onTabChange(tab.id)}
-					>
-						{tab.name}
-					</li>
-				))}
-			</ul>
+			<Tabs tabsData={tabsData} />
 
 			<div className={s.aside__content}>
 				{articles.map((news) => (
