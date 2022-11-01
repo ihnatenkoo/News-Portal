@@ -77,3 +77,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.aside {
+		padding-left: 24px;
+
+		&__header {
+			padding-right: 24px;
+		}
+	}
+}
