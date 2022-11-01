@@ -97,15 +97,33 @@
 }
 
 @media screen and (max-width: 575px) {
-	.cards {
+	.cards,
+	.aside {
 		display: none;
+
+		&.visible {
+			display: block;
+		}
+	}
+
+	.cards {
+		margin-top: 32px;
 	}
 
 	.news {
 		border-radius: 0;
 		padding: 56px 24px;
+
+		&__inner {
+			flex-direction: column;
+		}
+
 		.aside {
 			width: 100%;
+
+			&__inner {
+				margin-top: 8px;
+			}
 
 			&__title {
 				display: none;

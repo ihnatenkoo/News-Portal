@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import {
 	HTag,
 	AllCategoriesTag,
@@ -25,6 +25,8 @@ interface INewsSection {
 }
 
 const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
+	const [activeCategory, setActiveCategory] = useState<string>('Новини');
+
 	return (
 		<section className={s.news}>
 			<div className={s.news__head}>
@@ -33,7 +35,15 @@ const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
 			</div>
 
 			<div className={s.news__inner}>
-				<div className={s.cards}>
+				<Tabs
+					tabsData={tabsData}
+					className={s.aside__tabs}
+					onChangeCategory={setActiveCategory}
+				/>
+
+				<div
+					className={cn(s.cards, { [s.visible]: activeCategory === 'Статті' })}
+				>
 					<div className={cn(s.card, s.main)}>
 						<img src={newsData.mainCard.img} alt="news" />
 						<Date className={s.card_date}>05 серпня 11:00</Date>
@@ -53,12 +63,12 @@ const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
 					</div>
 				</div>
 
-				<aside className={s.aside}>
+				<aside
+					className={cn(s.aside, { [s.visible]: activeCategory === 'Новини' })}
+				>
 					<HTag tag="h5" className={s.aside__title}>
 						Новини розділу
 					</HTag>
-
-					<Tabs tabsData={tabsData} className={s.aside__tabs} />
 
 					<div className={s.aside__inner}>
 						{newsData.news.map((news) => (
