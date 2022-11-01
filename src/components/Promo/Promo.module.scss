@@ -1,6 +1,7 @@
 .promo {
 	padding: 24px 32px 32px;
 	background-color: var(--white);
+	border-radius: 12px;
 
 	&__head {
 		margin-bottom: 24px;
@@ -12,14 +13,20 @@
 	&__inner {
 		margin-bottom: 24px;
 		display: flex;
-		flex-wrap: wrap;
 		gap: 16px 32px;
+
+		&_img {
+			max-width: 100%;
+		}
 
 		h2 {
 			font-weight: 600;
 		}
 
 		&_info {
+			width: 530px;
+			max-width: 100%;
+
 			p {
 				margin-bottom: 10px;
 				display: flex;
@@ -30,7 +37,7 @@
 	}
 
 	&__cards {
-		display: flex;
+		display: none;
 		gap: 0 32px;
 
 		&_item {
@@ -53,8 +60,8 @@
 
 @media screen and (max-width: 1200px) {
 	.promo {
-		&__cards {
-			display: none;
+		&__inner {
+			flex-wrap: wrap;
 		}
 	}
 }
@@ -62,9 +69,9 @@
 @media screen and (max-width: 991px) {
 	.promo {
 		&__inner {
-			&_img {
+			&_img,
+			&_info {
 				width: 100%;
-				max-width: 100%;
 			}
 		}
 	}
@@ -73,6 +80,7 @@
 @media screen and (max-width: 575px) {
 	.promo {
 		padding: 24px 16px 32px;
+
 		&__inner {
 			&_title {
 				font-size: 22px;
