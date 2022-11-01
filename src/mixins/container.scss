@@ -1,0 +1,9 @@
+@mixin container {
+	padding-left: 64px;
+	padding-right: 64px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}

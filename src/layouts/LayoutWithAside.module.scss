@@ -1,4 +1,8 @@
+@import '../mixins/container.scss';
+
 .layout {
+	@include container;
+
 	position: relative;
 	display: flex;
 	gap: 40px 32px;
@@ -7,5 +11,12 @@
 @media screen and (max-width: 991px) {
 	.layout {
 		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.layout {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

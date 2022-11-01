@@ -49,8 +49,8 @@ const newsData = [
 
 const RedactionChoice: FC = () => {
 	return (
-		<section>
-			<HTag className={s.section_title} tag="h2">
+		<section className={s.section}>
+			<HTag className={s.section__title} tag="h2">
 				Вибір редакції
 			</HTag>
 			<div className={s.news}>

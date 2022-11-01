@@ -8,7 +8,7 @@ interface ITabs {
 		name: string;
 	}>;
 	className?: string;
-	onChangeCategory: Dispatch<React.SetStateAction<string>>;
+	onChangeCategory?: Dispatch<React.SetStateAction<string>>;
 }
 
 export const Tabs: FC<ITabs> = ({ tabsData, className, onChangeCategory }) => {
@@ -16,7 +16,7 @@ export const Tabs: FC<ITabs> = ({ tabsData, className, onChangeCategory }) => {
 
 	const onTabChange = (index: number): void => {
 		setActiveTab(index);
-		onChangeCategory(tabsData[index - 1].name);
+		if (onChangeCategory) onChangeCategory(tabsData[index - 1].name);
 	};
 
 	return (

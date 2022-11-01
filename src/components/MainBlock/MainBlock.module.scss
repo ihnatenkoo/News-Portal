@@ -10,8 +10,8 @@
 	gap: 56px 0;
 }
 
-@media screen and (max-width: 425px) {
-	.content {
-		margin-top: 1345px;
+@media screen and (max-width: 575px) {
+	.section {
+		padding-top: 0;
 	}
 }
