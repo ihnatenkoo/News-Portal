@@ -1,7 +1,7 @@
 .promo {
 	padding: 24px 32px 32px;
 	background-color: var(--white);
-	border-radius: 12px;
+	border-radius: var(--br-L);
 
 	&__head {
 		margin-bottom: 24px;
@@ -45,7 +45,7 @@
 			width: 304px;
 			min-width: 304px;
 			background: #f7f7f7;
-			border-radius: 8px;
+			border-radius: var(--br-M);
 			display: flex;
 			flex-direction: column;
 			gap: 10px 0;

@@ -19,7 +19,7 @@ const Footer: FC = () => {
 	return (
 		<>
 			<footer className={cn(s.footer)}>
-				<div className={cn(s.footer__inner, 'container')}>
+				<div className={cn(s.footer__inner)}>
 					<div className={s.cols__inner}>
 						<div className={s.col}>
 							<a href="#" className={s.title}>

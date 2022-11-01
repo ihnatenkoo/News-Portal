@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: flex-end;
 	border: 1px solid #979ea9;
-	border-radius: 4px;
+	border-radius: var(--br-S);
 	transition: all 0.15s ease-in;
 
 	&:hover {

@@ -1,4 +1,8 @@
+@import '../../mixins/container.scss';
+
 .stats {
+	@include container;
+
 	white-space: nowrap;
 	overflow: hidden;
 	padding-top: 6px;

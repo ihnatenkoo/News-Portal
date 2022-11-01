@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import s from './WarStatistic.module.scss';
-import cn from 'classnames';
 
 const daysOfWar = '247';
 
@@ -31,7 +30,7 @@ const statisticData = [
 
 const WarStatistic: FC = () => {
 	return (
-		<section className={cn(s.stats, 'container')}>
+		<section className={s.stats}>
 			<div className={s.stats__days}>{daysOfWar} день вiйни:</div>
 			<div className={s.stats__count}>
 				{statisticData.map((stat) => (

@@ -20,7 +20,7 @@ const TopBar: FC = () => {
 	};
 
 	return (
-		<nav className={cn(s.nav, 'container')}>
+		<nav className={s.nav}>
 			<div className={s.nav__leftBar}>
 				<menu className={s.menu}>
 					<img src="icons/menu-icon.svg" alt="menu" className={s.menu__img} />

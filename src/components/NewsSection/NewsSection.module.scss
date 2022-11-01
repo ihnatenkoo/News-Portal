@@ -1,6 +1,6 @@
 .news {
 	padding: 24px 32px 32px;
-	border-radius: 12px;
+	border-radius: var(--br-L);
 	background-color: var(--white);
 
 	&__head {

@@ -1,9 +1,13 @@
+@import '../../mixins/container.scss';
+
 .footer {
 	padding: 56px 0 62px;
 	border-top: 1px solid #dbdbdb;
 	border-bottom: 1px solid #dbdbdb;
 
 	&__inner {
+		@include container;
+
 		display: flex;
 		flex-direction: column;
 		gap: 66px 0;

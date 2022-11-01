@@ -9,6 +9,9 @@
 	--mainBlack: #182840;
 	--black: #2d2d2d;
 	--mainBg: #f6f6f6;
+	--br-L: 12px;
+	--br-M: 8px;
+	--br-S: 4px;
 
 	font-family: TT Severs, Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -73,16 +76,4 @@ h6 {
 
 ul {
 	list-style: none;
-}
-
-.container {
-	padding-left: 64px;
-	padding-right: 64px;
-}
-
-@media screen and (max-width: 768px) {
-	.container {
-		padding-left: 24px;
-		padding-right: 24px;
-	}
 }

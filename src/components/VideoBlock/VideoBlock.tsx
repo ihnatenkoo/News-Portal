@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { HTag, Date } from '../ui';
 import s from './VideoBlock.module.scss';
-import cn from 'classnames';
 
 const videosData = [
 	{
@@ -29,7 +28,7 @@ const videosData = [
 
 const VideoBlock: FC = () => {
 	return (
-		<section className={cn(s.section, 'container')}>
+		<section className={s.section}>
 			<div className={s.section__head}>
 				<HTag tag="h2" className={s.section__head_title}>
 					Вiдео
