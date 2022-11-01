@@ -38,13 +38,13 @@
 	cursor: pointer;
 
 	&_title {
-		font-weight: 600 !important;
-		color: var(--white) !important;
+		font-weight: 600;
+		color: var(--white);
 	}
 
 	&_date {
 		margin: 32px 0 24px;
-		color: var(--white) !important;
+		color: var(--white);
 	}
 }
 
@@ -61,11 +61,11 @@
 
 		&_date {
 			margin: 16px 0 8px;
-			color: var(--white) !important;
+			color: var(--white);
 		}
 
 		&_title {
-			color: var(--white) !important;
+			color: var(--white);
 		}
 	}
 }

@@ -92,7 +92,7 @@ const articles = [
 ];
 
 const AllNews: FC = () => {
-	const [activeCategory, setActiveCategory] = useState('Всi');
+	const [activeCategory, setActiveCategory] = useState<string>('Всi');
 
 	return (
 		<aside className={s.aside}>

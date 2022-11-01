@@ -37,7 +37,7 @@ const sliderPubsData = [
 ];
 
 const IntroBlock: FC = () => {
-	const [activePub, setActivePub] = useState(1);
+	const [activePub, setActivePub] = useState<number>(1);
 
 	useEffect(() => {
 		const interval = setInterval(() => onChangePub(activePub + 1), 3000);

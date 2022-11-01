@@ -8,15 +8,21 @@ const languages = [
 ];
 
 const TopBar: FC = () => {
-	const [activeLanguage, setActiveLanguage] = useState('UA');
-	const [isInputVisible, setIsInputVisible] = useState(false);
-
-	const onChangeLanguage = (value: string): void => {
-		setActiveLanguage(value);
-	};
+	const [activeLanguage, setActiveLanguage] = useState<string>('UA');
+	const [isInputVisible, setIsInputVisible] = useState<boolean>(false);
+	const [isLangOpen, setIsLangOpen] = useState<boolean>(false);
 
 	const onToggleInputVisible = (): void => {
 		setIsInputVisible((prev) => !prev);
+	};
+
+	const onChangeLanguage = (value: string): void => {
+		setActiveLanguage(value);
+		setIsLangOpen(false);
+	};
+
+	const onToggleLangVisible = (): void => {
+		setIsLangOpen((prev) => !prev);
 	};
 
 	return (
@@ -53,16 +59,22 @@ const TopBar: FC = () => {
 
 				<div className={s.divider}></div>
 
-				<div className={s.languages}>
-					{languages.map((l) => (
-						<span
-							key={l.id}
-							className={cn({ [s.active]: activeLanguage === l.name })}
-							onClick={() => onChangeLanguage(l.name)}
-						>
-							{l.name}
-						</span>
-					))}
+				<div className={cn(s.languages, { [s.open]: isLangOpen })}>
+					<p className={s.languages__title} onClick={onToggleLangVisible}>
+						{activeLanguage}
+						<img src="/icons/lang-arrow.svg" alt="arrow" />
+					</p>
+					<ul className={s.languages__list}>
+						{languages.map((lang) => (
+							<li
+								key={lang.id}
+								className={cn({ [s.active]: activeLanguage === lang.name })}
+								onClick={() => onChangeLanguage(lang.name)}
+							>
+								{lang.name}
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
 		</nav>

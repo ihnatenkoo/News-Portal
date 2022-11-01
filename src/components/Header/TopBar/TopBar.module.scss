@@ -98,18 +98,27 @@
 		}
 
 		.languages {
-			display: flex;
-			gap: 0 16px;
 			font-weight: 500;
 			font-size: 14px;
-			color: #b0b0b0;
+			color: var(--black);
 
-			span {
-				cursor: pointer;
+			&__title {
+				display: none;
+				font-weight: 600;
 			}
 
-			span.active {
-				color: var(--black);
+			&__list {
+				display: flex;
+				gap: 0 16px;
+
+				li {
+					color: #b0b0b0;
+					cursor: pointer;
+				}
+
+				li.active {
+					color: var(--black);
+				}
 			}
 		}
 	}
@@ -181,9 +190,24 @@
 			}
 
 			.languages {
-				flex-direction: column;
-				max-height: 14px;
+				padding-top: 2px;
+				max-height: 24px;
 				overflow: hidden;
+
+				&__title {
+					display: flex;
+					gap: 0 4px;
+					align-items: center;
+				}
+
+				&__list {
+					flex-direction: column;
+				}
+
+				&.open {
+					overflow: visible;
+					height: 200px;
+				}
 			}
 		}
 
