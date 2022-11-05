@@ -1,3 +1,4 @@
+@import 'swiper/css';
 @import url('/fonts/TTSevers/stylesheet.scss');
 
 :root {
@@ -76,4 +77,8 @@ h6 {
 
 ul {
 	list-style: none;
+}
+
+.swiper-slide {
+	width: auto;
 }

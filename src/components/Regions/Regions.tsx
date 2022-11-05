@@ -3,11 +3,12 @@ import { AllCategoriesTag, HTag, Tabs } from '../ui/';
 import RegionCard from './RegionCard/RegionCard';
 import { IAllNews } from './types';
 import s from './Regions.module.scss';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const tabsData = [
 	{ id: 1, name: 'Київ' },
-	{ id: 2, name: 'Харків' },
-	{ id: 3, name: 'Одеса' },
+	{ id: 2, name: 'Одеса' },
+	{ id: 3, name: 'Харків' },
 ];
 
 const regionsNewsData: Array<IAllNews> = [
@@ -149,11 +150,13 @@ const Regions: FC = () => {
 
 			<Tabs tabsData={tabsData} className={s.regions__tabs} />
 
-			<div className={s.regions__cards}>
+			<Swiper spaceBetween={16} slidesPerView={'auto'} className={s.swiper}>
 				{regionsNewsData.map((region) => (
-					<RegionCard newsData={region} key={region.city} />
+					<SwiperSlide key={region.city}>
+						<RegionCard newsData={region} key={region.city} />
+					</SwiperSlide>
 				))}
-			</div>
+			</Swiper>
 		</section>
 	);
 };
