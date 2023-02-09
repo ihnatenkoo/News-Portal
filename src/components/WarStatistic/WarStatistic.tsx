@@ -1,31 +1,31 @@
 import { FC } from 'react';
 import s from './WarStatistic.module.scss';
 
-const daysOfWar = '247';
+const daysOfWar = '401';
 
 const statisticData = [
 	{
 		id: 1,
 		name: 'особовий склад',
-		count: '~69700',
+		count: '~200710',
 		icon: '/icons/statistic/helmet.svg',
 	},
-	{ id: 2, name: 'танки', count: '2640', icon: '/icons/statistic/tank.svg' },
+	{ id: 2, name: 'танки', count: '4140', icon: '/icons/statistic/tank.svg' },
 	{
 		id: 3,
 		name: 'артсистеми',
 		count: '4578',
 		icon: '/icons/statistic/art.svg',
 	},
-	{ id: 4, name: 'лiтаки', count: '272', icon: '/icons/statistic/fly.svg' },
-	{ id: 5, name: 'РЗСВ', count: '379', icon: '/icons/statistic/missile.svg' },
+	{ id: 4, name: 'лiтаки', count: '372', icon: '/icons/statistic/fly.svg' },
+	{ id: 5, name: 'РЗСВ', count: '479', icon: '/icons/statistic/missile.svg' },
 	{
 		id: 6,
 		name: 'гелiкоптери',
-		count: '251',
+		count: '351',
 		icon: '/icons/statistic/helicopter.svg',
 	},
-	{ id: 7, name: 'ББМ', count: '5378', icon: '/icons/statistic/bbm.svg' },
+	{ id: 7, name: 'ББМ', count: '7378', icon: '/icons/statistic/bbm.svg' },
 ];
 
 const WarStatistic: FC = () => {
