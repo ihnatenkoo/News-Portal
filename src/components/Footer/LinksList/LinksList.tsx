@@ -33,7 +33,7 @@ const LinksList: FC<ILinksList> = ({ title, linksData }) => {
 
 			{linksData.map((l) => (
 				<li key={l.id}>
-					<a href="#">{l.link}</a>
+					<a>{l.link}</a>
 				</li>
 			))}
 		</ul>

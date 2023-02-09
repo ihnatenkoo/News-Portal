@@ -5,7 +5,7 @@ import s from './MoreNews.module.scss';
 export const MoreNews: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<button>
-			<a href="#" className={s.link}>
+			<a className={s.link}>
 				<HTag tag="h5" className={s.link__title}>
 					{children}
 				</HTag>

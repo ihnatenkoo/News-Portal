@@ -34,9 +34,9 @@ const TopBar: FC = () => {
 				</menu>
 
 				<div className={s.cities}>
-					<a href="#">Київ</a>
-					<a href="#">Одеса</a>
-					<a href="#">Харків</a>
+					<a>Київ</a>
+					<a>Одеса</a>
+					<a>Харків</a>
 				</div>
 			</div>
 

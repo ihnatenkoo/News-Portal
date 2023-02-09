@@ -22,12 +22,8 @@ const Footer: FC = () => {
 				<div className={cn(s.footer__inner)}>
 					<div className={s.cols__inner}>
 						<div className={s.col}>
-							<a href="#" className={s.title}>
-								Всі новини
-							</a>
-							<a href="#" className={s.title}>
-								COVID-19
-							</a>
+							<a className={s.title}>Всі новини</a>
+							<a className={s.title}>COVID-19</a>
 
 							<LinksList title="Війна" linksData={[]} />
 							<LinksList title="Політика" linksData={politicLinks} />
@@ -54,38 +50,38 @@ const Footer: FC = () => {
 						</div>
 
 						<div className={cn(s.col, s.links)}>
-							<a href="#">Про нас</a>
-							<a href="#">Контакти</a>
-							<a href="#">Структура власності</a>
-							<a href="#">Команда</a>
-							<a href="#">Медіакіт</a>
+							<a>Про нас</a>
+							<a>Контакти</a>
+							<a>Структура власності</a>
+							<a>Команда</a>
+							<a>Медіакіт</a>
 						</div>
 					</div>
 
 					<div className={s.social}>
 						<HTag tag="h3">Новини у зручному форматі</HTag>
 						<div className={s.social__inner}>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/youtube.png" alt="socials" />
 								<span>YouTube</span>
 							</a>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/telegram.png" alt="socials" />
 								<span>Telegram</span>
 							</a>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/instagram.png" alt="socials" />
 								<span>Instagram</span>
 							</a>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/facebook.png" alt="socials" />
 								<span>Facebook</span>
 							</a>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/tiktok.png" alt="socials" />
 								<span>TikTok</span>
 							</a>
-							<a href="#" className={s.social__item}>
+							<a className={s.social__item}>
 								<img src="/icons/social/footer/google.png" alt="socials" />
 								<span>Google news</span>
 							</a>

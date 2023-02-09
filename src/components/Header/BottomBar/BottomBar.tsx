@@ -8,15 +8,13 @@ const BottomBar: FC = () => {
 				<img src="/icons/fair.svg" alt="fair" className={s.nav__articles_hot} />
 
 				<div className={s.nav__articles_links}>
-					<a className={s.active} href="#">
-						війна
-					</a>
-					<a href="#">новини</a>
-					<a href="#">політика</a>
-					<a href="#">економіка</a>
-					<a href="#">суспільство</a>
-					<a href="#">погляди</a>
-					<a href="#">світ</a>
+					<a className={s.active}>війна</a>
+					<a>новини</a>
+					<a>політика</a>
+					<a>економіка</a>
+					<a>суспільство</a>
+					<a>погляди</a>
+					<a>світ</a>
 				</div>
 			</div>
 

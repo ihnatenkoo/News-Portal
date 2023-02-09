@@ -34,7 +34,7 @@ const VideoBlock: FC = () => {
 					Вiдео
 				</HTag>
 				<button>
-					<a href="#" className={s.link}>
+					<a className={s.link}>
 						<HTag tag="h5" className={s.link__title}>
 							Більше новин
 						</HTag>

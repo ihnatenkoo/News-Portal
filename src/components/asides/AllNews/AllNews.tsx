@@ -98,9 +98,7 @@ const AllNews: FC = () => {
 		<aside className={s.aside}>
 			<header className={s.aside__header}>
 				<HTag tag="h3">Всі новини</HTag>
-				<a href="#" className={s.aside__header_archive}>
-					Архiв
-				</a>
+				<a className={s.aside__header_archive}>Архiв</a>
 			</header>
 
 			<Tabs tabsData={tabsData} onChangeCategory={setActiveCategory} />
