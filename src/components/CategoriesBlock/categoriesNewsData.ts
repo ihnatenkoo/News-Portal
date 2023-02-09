@@ -2,20 +2,20 @@ export const politicsData = {
 	mainCard: {
 		title:
 			'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-		img: '/images/redaction-choice/main.jpg',
+		img: '/images/article/6.jpg',
 	},
 	cards: [
 		{
 			id: 1,
 			title:
-				'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-			img: '/images/redaction-choice/main.jpg',
+				'Обговорили можливості постачання зброї, питання продовження економічної підтримки',
+			img: '/images/article/8.jpg',
 		},
 		{
 			id: 2,
 			title:
-				'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-			img: '/images/redaction-choice/main.jpg',
+				'До Європи за захистом. Що означає позов Ахметова до Європейського суду з прав людини',
+			img: '/images/article/14.jpg',
 		},
 	],
 	news: [
@@ -69,22 +69,20 @@ export const politicsData = {
 
 export const economicsData = {
 	mainCard: {
-		title:
-			'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-		img: '/images/redaction-choice/main.jpg',
+		title: 'Інфляція в Україні прискорилась. Як змінилися ціни за місяць.',
+		img: '/images/article/9.jpg',
 	},
 	cards: [
 		{
 			id: 1,
-			title:
-				'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-			img: '/images/redaction-choice/main.jpg',
+			title: 'Чи зростуть ціни на продукти? Чи варто класти гроші  на депозит?',
+			img: '/images/article/10.jpg',
 		},
 		{
 			id: 2,
 			title:
-				'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-			img: '/images/redaction-choice/main.jpg',
+				'Золото подешевшало: чи варто інвесторам негайно позбавлятися цього активу',
+			img: '/images/article/11.jpg',
 		},
 	],
 	news: [
@@ -138,22 +136,21 @@ export const economicsData = {
 
 export const lifestyleData = {
 	mainCard: {
-		title:
-			'Селезньов розповів, навіщо росіяни спустошують склади боєприпасів у Білорусі',
-		img: '/images/redaction-choice/second.jpg',
+		title: 'Київський бренд Oliz випустив хустину, присвячену борщу',
+		img: '/images/article/15.jpg',
 	},
 	cards: [
 		{
 			id: 1,
 			title:
-				'У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.',
-			img: '/images/redaction-choice/main.jpg',
+				'За кілька днів до #ГвардіяНаступу записалось більше 20 тисяч добровольців',
+			img: '/images/article/12.jpg',
 		},
 		{
 			id: 2,
 			title:
-				'ТРЦ Ocean Plaza після чуток про закриття оголосив про відновлення роботи',
-			img: '/images/redaction-choice/main.jpg',
+				'«Білі янголи» вивезли майже всіх дітей з Вугледару, - Ігор Клименко',
+			img: '/images/article/13.jpg',
 		},
 	],
 	news: [

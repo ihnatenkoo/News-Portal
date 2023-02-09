@@ -15,8 +15,8 @@ import s from './NewsSection.module.scss';
 import cn from 'classnames';
 
 const tabsData = [
-	{ id: 1, name: 'Новини' },
-	{ id: 2, name: 'Статті' },
+	{ id: 1, name: 'Статті' },
+	{ id: 2, name: 'Новини' },
 ];
 
 interface INewsSection {
@@ -25,7 +25,7 @@ interface INewsSection {
 }
 
 const NewsSection: FC<INewsSection> = ({ category, newsData }) => {
-	const [activeCategory, setActiveCategory] = useState<string>('Новини');
+	const [activeCategory, setActiveCategory] = useState<string>('Статті');
 
 	return (
 		<section className={s.news}>
