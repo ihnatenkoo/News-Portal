@@ -1,4 +1,7 @@
 import { FC, useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 import s from './IntroBlock.module.scss';
 import cn from 'classnames';
 
@@ -38,9 +41,10 @@ const sliderPubsData = [
 
 const IntroBlock: FC = () => {
 	const [activePub, setActivePub] = useState<number>(1);
+	const { isLoopIntroSlider } = useMatchMedia();
 
 	useEffect(() => {
-		const interval = setInterval(() => onChangePub(activePub + 1), 3000);
+		const interval = setInterval(() => onChangePub(activePub + 1), 2900);
 		return () => clearInterval(interval);
 	}, [activePub]);
 
@@ -82,20 +86,32 @@ const IntroBlock: FC = () => {
 					></div>
 				</nav>
 
-				<div className={s.slider__pubs}>
+				<Swiper
+					modules={[Autoplay]}
+					spaceBetween={16}
+					slidesPerView={'auto'}
+					loop={isLoopIntroSlider}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
+					speed={500}
+					style={{ width: '100%', transitionTimingFunction: 'linear' }}
+				>
 					{sliderPubsData.map((pub, index) => (
-						<div
-							key={pub.id}
-							className={cn(s.slider__pubs_item, {
-								[s.active]: activePub === index + 1,
-							})}
-							onClick={() => onChangePub(index + 1)}
-						>
-							<img src={pub.thumb} alt="news" />
-							<h2>{pub.text}</h2>
-						</div>
+						<SwiperSlide key={pub.id}>
+							<div
+								className={cn(s.slider__item, {
+									[s.active]: activePub === index + 1,
+								})}
+								onClick={() => onChangePub(index + 1)}
+							>
+								<img src={pub.thumb} alt="news" />
+								<h2>{pub.text}</h2>
+							</div>
+						</SwiperSlide>
 					))}
-				</div>
+				</Swiper>
 			</div>
 		</section>
 	);
