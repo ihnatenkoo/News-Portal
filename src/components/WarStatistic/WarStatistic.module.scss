@@ -1,8 +1,7 @@
 @import '../../mixins/container.scss';
 
 .stats {
-	@include container;
-
+	padding-left: 64px;
 	white-space: nowrap;
 	overflow: hidden;
 	padding-top: 6px;
@@ -40,8 +39,9 @@
 	}
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
 	.stats {
+		padding-left: 24px;
 		font-size: 12px;
 	}
 }

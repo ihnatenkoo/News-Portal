@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import s from './WarStatistic.module.scss';
 
 const daysOfWar = '401';
@@ -6,7 +8,7 @@ const daysOfWar = '401';
 const statisticData = [
 	{
 		id: 1,
-		name: 'особовий склад',
+		name: 'солдати',
 		count: '~200710',
 		icon: '/icons/statistic/helmet.svg',
 	},
@@ -32,16 +34,44 @@ const WarStatistic: FC = () => {
 	return (
 		<section className={s.stats}>
 			<div className={s.stats__days}>{daysOfWar} день вiйни:</div>
-			<div className={s.stats__count}>
+			<Swiper
+				modules={[Autoplay]}
+				spaceBetween={0}
+				slidesPerView={7}
+				loop={true}
+				autoplay={{
+					delay: 1,
+					disableOnInteraction: false,
+				}}
+				speed={1200}
+				style={{ transitionTimingFunction: 'linear' }}
+				breakpoints={{
+					320: {
+						slidesPerView: 1,
+					},
+					480: {
+						slidesPerView: 3,
+					},
+					1024: {
+						slidesPerView: 5,
+					},
+					1400: {
+						slidesPerView: 7,
+					},
+				}}
+				className={s.stats__count}
+			>
 				{statisticData.map((stat) => (
-					<div key={stat.id} className={s.stats__count_item}>
-						<img src={stat.icon} alt={stat.name} />
-						<p>
-							{stat.name} <span>{stat.count}</span>
-						</p>
-					</div>
+					<SwiperSlide key={stat.id}>
+						<div className={s.stats__count_item}>
+							<img src={stat.icon} alt={stat.name} />
+							<p>
+								{stat.name} <span>{stat.count}</span>
+							</p>
+						</div>
+					</SwiperSlide>
 				))}
-			</div>
+			</Swiper>
 		</section>
 	);
 };
