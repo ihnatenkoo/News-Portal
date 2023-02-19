@@ -1,16 +1,9 @@
 @import '../../../mixins/container.scss';
 
 .nav {
-	@include container;
-
-	padding-top: 12px;
-	padding-bottom: 16px;
+	padding: 12px 64px 16px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 0 12px;
 	background-color: var(--white);
-	overflow: hidden;
 
 	font-weight: 600;
 	font-size: 14px;
@@ -18,27 +11,10 @@
 	color: var(--mainBlack);
 	text-transform: uppercase;
 
-	&__articles {
+	&__links {
+		height: 21px;
 		display: flex;
-		align-items: center;
-		gap: 0 8px;
-
-		&_hot {
-			display: flex;
-			align-items: center;
-			gap: 0 8px;
-		}
-
-		&_links {
-			height: 21px;
-			display: flex;
-			align-items: end;
-			gap: 0 40px;
-
-			.active {
-				color: var(--accent);
-			}
-		}
+		align-items: end;
 	}
 
 	&__live {
@@ -50,10 +26,14 @@
 
 @media screen and (max-width: 991px) {
 	.nav {
-		&__articles {
-			&_links {
-				gap: 0 24px;
-			}
+		&__live {
+			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		padding: 12px 0px 16px 16px;
 	}
 }
