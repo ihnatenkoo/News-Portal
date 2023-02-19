@@ -40,16 +40,18 @@ const WarStatistic: FC = () => {
 				slidesPerView={7}
 				loop={true}
 				autoplay={{
-					delay: 1,
+					delay: -0,
 					disableOnInteraction: false,
 				}}
-				speed={1200}
-				style={{ transitionTimingFunction: 'linear' }}
+				speed={2000}
 				breakpoints={{
 					320: {
 						slidesPerView: 1,
 					},
-					480: {
+					380: {
+						slidesPerView: 2,
+					},
+					768: {
 						slidesPerView: 3,
 					},
 					1024: {

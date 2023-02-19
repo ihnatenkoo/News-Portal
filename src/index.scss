@@ -83,3 +83,7 @@ ul {
 .swiper-slide {
 	width: auto;
 }
+
+.swiper-wrapper {
+	transition-timing-function: linear;
+}
