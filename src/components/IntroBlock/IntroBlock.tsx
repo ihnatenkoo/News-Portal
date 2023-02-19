@@ -44,7 +44,7 @@ const IntroBlock: FC = () => {
 	const { isLoopIntroSlider } = useMatchMedia();
 
 	useEffect(() => {
-		const interval = setInterval(() => onChangePub(activePub + 1), 2900);
+		const interval = setInterval(() => onChangePub(activePub + 1), 3000);
 		return () => clearInterval(interval);
 	}, [activePub]);
 
