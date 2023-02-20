@@ -9,14 +9,21 @@ interface ITabs {
 	}>;
 	className?: string;
 	onChangeCategory?: Dispatch<React.SetStateAction<string>>;
+	onChangeCity?: Dispatch<React.SetStateAction<number>>;
 }
 
-export const Tabs: FC<ITabs> = ({ tabsData, className, onChangeCategory }) => {
+export const Tabs: FC<ITabs> = ({
+	tabsData,
+	className,
+	onChangeCategory,
+	onChangeCity,
+}) => {
 	const [activeTab, setActiveTab] = useState<number>(1);
 
 	const onTabChange = (index: number): void => {
 		setActiveTab(index);
 		if (onChangeCategory) onChangeCategory(tabsData[index - 1].name);
+		if (onChangeCity) onChangeCity(index - 1);
 	};
 
 	return (

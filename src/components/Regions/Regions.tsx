@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { AllCategoriesTag, HTag, Tabs } from '../ui/';
 import RegionCard from './RegionCard/RegionCard';
 import { IAllNews } from './types';
 import s from './Regions.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 
 const tabsData = [
 	{ id: 1, name: 'Київ' },
@@ -141,6 +142,15 @@ const regionsNewsData: Array<IAllNews> = [
 ];
 
 const Regions: FC = () => {
+	const [activeCity, setActiveCity] = useState<number>(0);
+	const [swiper, setSwiperInstance] = useState<SwiperType | null>(null);
+
+	useEffect(() => {
+		if (swiper) {
+			swiper.slideTo(activeCity);
+		}
+	}, [activeCity]);
+
 	return (
 		<section className={s.regions}>
 			<div className={s.regions__head}>
@@ -148,14 +158,27 @@ const Regions: FC = () => {
 				<AllCategoriesTag>Всі новини розділу</AllCategoriesTag>
 			</div>
 
-			<Tabs tabsData={tabsData} className={s.regions__tabs} />
+			<Tabs
+				tabsData={tabsData}
+				className={s.regions__tabs}
+				onChangeCity={setActiveCity}
+			/>
 
-			<Swiper spaceBetween={16} slidesPerView={'auto'} className={s.swiper}>
-				{regionsNewsData.map((region) => (
+			<Swiper
+				onSwiper={(swiper) => setSwiperInstance(swiper)}
+				spaceBetween={16}
+				slidesPerView={'auto'}
+				className={s.swiper}
+			>
+				{regionsNewsData.map((region, i) => (
 					<SwiperSlide key={region.city}>
 						<RegionCard newsData={region} key={region.city} />
 					</SwiperSlide>
 				))}
+				<SwiperSlide
+					className={s.last_mock_card}
+					style={{ width: '331px' }}
+				></SwiperSlide>
 			</Swiper>
 		</section>
 	);

@@ -17,6 +17,10 @@
 	}
 }
 
+.last_mock_card {
+	display: none;
+}
+
 @media screen and (max-width: 991px) {
 	.regions {
 		&__head {
@@ -26,6 +30,10 @@
 		&__tabs {
 			display: flex;
 		}
+	}
+
+	.last_mock_card {
+		display: block;
 	}
 }
 
