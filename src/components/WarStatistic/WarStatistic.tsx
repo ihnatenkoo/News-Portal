@@ -40,7 +40,7 @@ const WarStatistic: FC = () => {
 				slidesPerView={7}
 				loop={true}
 				autoplay={{
-					delay: -0,
+					delay: 0,
 					disableOnInteraction: false,
 				}}
 				speed={2000}

@@ -9,13 +9,10 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-
-	&__content {
-		margin-bottom: 32px;
-	}
 }
 
 .article {
+	height: 225px !important;
 	padding: 24px 0;
 	border-bottom: 1px solid var(--gray-light);
 	cursor: pointer;
@@ -54,19 +51,21 @@
 		background-color: transparent;
 
 		&__header {
+			padding: 0 12px;
 			margin-bottom: 24px;
 		}
 
 		&__content {
-			overflow: hidden;
 			margin-bottom: 0;
 			display: flex;
 			gap: 0 24px;
 		}
 
 		.article {
+			height: 200px !important;
 			padding: 16px;
 			min-width: 304px;
+			width: 304px;
 			border-bottom: none;
 			background-color: var(--white);
 			border-radius: var(--br-M);
@@ -74,16 +73,6 @@
 
 		button {
 			display: none;
-		}
-	}
-}
-
-@media screen and (max-width: 991px) {
-	.aside {
-		padding-left: 24px;
-
-		&__header {
-			padding-right: 24px;
 		}
 	}
 }

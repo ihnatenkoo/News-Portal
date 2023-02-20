@@ -2,9 +2,10 @@ import { useState, useLayoutEffect } from 'react';
 
 interface IMediaResult {
 	isLoopIntroSlider?: boolean;
+	isLoopAsideColumns?: boolean;
 }
 
-const queries = ['(max-width: 1300px)'];
+const queries = ['(max-width: 1300px)', '(max-width: 991px)'];
 
 export const useMatchMedia = (): IMediaResult => {
 	const mediaQueryLists = queries.map((query) => matchMedia(query));
@@ -24,7 +25,7 @@ export const useMatchMedia = (): IMediaResult => {
 			);
 	}, []);
 
-	return ['isLoopIntroSlider'].reduce(
+	return ['isLoopIntroSlider', 'isLoopAsideColumns'].reduce(
 		(acc, screen, index) => ({
 			...acc,
 			[screen]: values[index],

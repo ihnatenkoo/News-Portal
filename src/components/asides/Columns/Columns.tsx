@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import { AllCategoriesTag, AllColumnsBtn, Date, HTag } from '../../ui';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+import { useMatchMedia } from '../../../hooks/useMatchMedia';
 import s from './Columns.module.scss';
 
 const columnsData = [
@@ -38,6 +41,8 @@ const columnsData = [
 ];
 
 const Columns: FC = () => {
+	const { isLoopAsideColumns } = useMatchMedia();
+
 	return (
 		<aside className={s.aside}>
 			<header className={s.aside__header}>
@@ -45,9 +50,23 @@ const Columns: FC = () => {
 				<AllCategoriesTag>Всі колонки</AllCategoriesTag>
 			</header>
 
-			<div className={s.aside__content}>
+			<Swiper
+				slidesPerView={'auto'}
+				spaceBetween={20}
+				modules={[Autoplay]}
+				loop={isLoopAsideColumns}
+				autoplay={{
+					delay: 0,
+					disableOnInteraction: false,
+				}}
+				speed={5000}
+				breakpoints={{
+					320: { direction: 'horizontal' },
+					992: { direction: 'vertical', autoplay: false },
+				}}
+			>
 				{columnsData.map((post) => (
-					<article className={s.article} key={post.id}>
+					<SwiperSlide key={post.id} className={s.article}>
 						<div className={s.article__author}>
 							<img src={post.photo} alt="author photo" />
 							<div className={s.article__author_info}>
@@ -60,9 +79,9 @@ const Columns: FC = () => {
 							{post.title}
 						</HTag>
 						<Date>{post.date}</Date>
-					</article>
+					</SwiperSlide>
 				))}
-			</div>
+			</Swiper>
 
 			<AllColumnsBtn />
 		</aside>
