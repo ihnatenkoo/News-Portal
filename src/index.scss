@@ -1,5 +1,8 @@
 @import 'swiper/css';
 @import url('/fonts/TTSevers/stylesheet.scss');
+@import './mixins/scroll.scss';
+
+@include scrollBar;
 
 :root {
 	--accent: #ff7534;
