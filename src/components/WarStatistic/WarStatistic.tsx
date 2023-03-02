@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import s from './WarStatistic.module.scss';
 
 const daysOfWar = '401';
@@ -48,7 +48,7 @@ const WarStatistic: FC = () => {
 					320: {
 						slidesPerView: 1,
 					},
-					380: {
+					425: {
 						slidesPerView: 2,
 					},
 					768: {
